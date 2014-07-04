@@ -28,8 +28,12 @@ class ViewController: UIViewController {
         tipCalc.total = Double(totalTextField.text.bridgeToObjectiveC().doubleValue)
         let possibleTips = tipCalc.returnPossibleTips()
         var results = ""
-        for (tipPct, tipValue) in possibleTips {
-            results += "\(tipPct)%: \(tipValue)\n"
+        var keys = Array(possibleTips.keys)
+        sort(keys)
+        for tipPct in keys {
+            let tipValue = possibleTips[tipPct]!
+            let prettyTipValue = String(format: "%.2f", tipValue)
+            results += "\(tipPct)%: \(prettyTipValue)\n"
         }
         resultsTextView.text = results
     }

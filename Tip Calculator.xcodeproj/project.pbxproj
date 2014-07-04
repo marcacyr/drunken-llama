@@ -12,6 +12,7 @@
 		C3F3742119663C2100B9BB58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F3741F19663C2100B9BB58 /* Main.storyboard */; };
 		C3F3742319663C2100B9BB58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F3742219663C2100B9BB58 /* Images.xcassets */; };
 		C3F3742F19663C2200B9BB58 /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3742E19663C2200B9BB58 /* Tip_CalculatorTests.swift */; };
+		C3F3743919663C5700B9BB58 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3743819663C5700B9BB58 /* TipCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		C3F3742819663C2200B9BB58 /* Tip CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F3742D19663C2200B9BB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3F3742E19663C2200B9BB58 /* Tip_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorTests.swift; sourceTree = "<group>"; };
+		C3F3743819663C5700B9BB58 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		C3F3741819663C2100B9BB58 /* Tip Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3743819663C5700B9BB58 /* TipCalculatorModel.swift */,
 				C3F3741B19663C2100B9BB58 /* AppDelegate.swift */,
 				C3F3741D19663C2100B9BB58 /* ViewController.swift */,
 				C3F3741F19663C2100B9BB58 /* Main.storyboard */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F3743919663C5700B9BB58 /* TipCalculatorModel.swift in Sources */,
 				C3F3741E19663C2100B9BB58 /* ViewController.swift in Sources */,
 				C3F3741C19663C2100B9BB58 /* AppDelegate.swift in Sources */,
 			);

@@ -35,6 +35,9 @@
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="KZ4-BR-Kmn">
                                 <rect key="frame" x="190" y="111" width="272" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="q4n-yM-ANX"/>
+                                </connections>
                             </slider>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LST-W6-zjq">
                                 <rect key="frame" x="20" y="187" width="440" height="288"/>
@@ -47,7 +50,16 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dGI-na-fpc"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab6-Hv-nu6">
+                                <rect key="frame" x="20" y="187" width="440" height="288"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -56,9 +68,13 @@
                             <constraint firstItem="xjL-PQ-rwa" firstAttribute="bottom" secondItem="Mfn-Eq-IVz" secondAttribute="bottom" id="5R4-Mf-oDB"/>
                             <constraint firstItem="BgL-Hg-W7D" firstAttribute="centerX" secondItem="LST-W6-zjq" secondAttribute="centerX" id="5rS-IQ-NLV"/>
                             <constraint firstItem="cQs-fu-vzT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="9P3-1R-O9g"/>
+                            <constraint firstItem="ab6-Hv-nu6" firstAttribute="top" secondItem="BgL-Hg-W7D" secondAttribute="bottom" constant="8" symbolic="YES" id="GY3-ld-Ykg"/>
                             <constraint firstItem="Mfn-Eq-IVz" firstAttribute="leading" secondItem="KZ4-BR-Kmn" secondAttribute="leading" id="I1A-ew-GYA"/>
                             <constraint firstItem="KZ4-BR-Kmn" firstAttribute="top" secondItem="Mfn-Eq-IVz" secondAttribute="bottom" constant="9" id="JYD-iq-8TX"/>
                             <constraint firstAttribute="trailing" secondItem="Mfn-Eq-IVz" secondAttribute="trailing" constant="20" symbolic="YES" id="PrO-sp-QLH"/>
+                            <constraint firstItem="ab6-Hv-nu6" firstAttribute="leading" secondItem="LST-W6-zjq" secondAttribute="leading" id="QDJ-qZ-4x5"/>
+                            <constraint firstItem="ab6-Hv-nu6" firstAttribute="bottom" secondItem="LST-W6-zjq" secondAttribute="bottom" id="QaP-Mw-RRZ"/>
+                            <constraint firstItem="ab6-Hv-nu6" firstAttribute="trailing" secondItem="LST-W6-zjq" secondAttribute="trailing" id="SwL-xt-dw9"/>
                             <constraint firstItem="LST-W6-zjq" firstAttribute="leading" secondItem="cQs-fu-vzT" secondAttribute="leading" id="VhA-H5-EyE"/>
                             <constraint firstItem="BgL-Hg-W7D" firstAttribute="top" secondItem="KZ4-BR-Kmn" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpb-a9-RQS"/>
                             <constraint firstItem="KZ4-BR-Kmn" firstAttribute="trailing" secondItem="LST-W6-zjq" secondAttribute="trailing" id="ZUM-kM-dvh"/>
@@ -76,14 +92,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="cTT-kF-dax"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="LST-W6-zjq" id="7XH-AC-DXo"/>
-                        <outlet property="taxPctLabel" destination="cQs-fu-vzT" id="llI-yn-T9O"/>
-                        <outlet property="taxPctSlider" destination="KZ4-BR-Kmn" id="FmG-HX-tR6"/>
-                        <outlet property="totalTextFixed" destination="Mfn-Eq-IVz" id="51y-jb-Oib"/>
+                        <outlet property="resultsTextView" destination="ab6-Hv-nu6" id="bHe-G0-pvh"/>
+                        <outlet property="taxPctLabel" destination="cQs-fu-vzT" id="obB-ln-txC"/>
+                        <outlet property="taxPctSlider" destination="KZ4-BR-Kmn" id="02Q-2n-7gG"/>
+                        <outlet property="totalTextField" destination="Mfn-Eq-IVz" id="mBH-22-yDd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="l07-gJ-Tj9"/>
+                <tapGestureRecognizer id="l07-gJ-Tj9">
+                    <connections>
+                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="jF5-3i-k7Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="831" y="141"/>
         </scene>
